@@ -22,7 +22,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message_file: ${{ FILE_NAME }}
+        message_file: ${{ env.FILE_NAME }}
       env:
         TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
