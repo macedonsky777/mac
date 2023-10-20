@@ -10,7 +10,7 @@ jobs:
       run: echo "Testing started" 
     
     - name: Test execution
-      run: python -m unittest discover tests
+      run: cd my_python_project && python -m unittest discover tests
 
 
 
