@@ -4,13 +4,16 @@ on:
     branches: [main]
 jobs:
   my_tests:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - name: Testing started
       run: echo "Testing started" 
     
     - name: Test execution
-      run: ls && cd ./my_python_project && python -m unittest discover tests
+      run: ls && cd my_python_project && python -m unittest discover tests
 
 
 
