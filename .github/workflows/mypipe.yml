@@ -1,6 +1,6 @@
 name: python_pypline_basic
 env:
-  FILE_NAME: "output.txt"
+  FILE_NAME: "my_python_project/output.txt"
 on:
   push:
     branches: [main]
@@ -15,7 +15,7 @@ jobs:
       run: echo "Testing started" 
     
     - name: Test execution
-      run: ls && cd my_python_project && echo "Tests result is:" > output.txt && python -m unittest discover tests >> output.txt
+      run: ls && cd my_python_project && echo "Tests result is:" > output.txt && python -m unittest discover tests >> my_python_project/output.txt
 
     - name: send telegram message on push
       uses: appleboy/telegram-action@master
