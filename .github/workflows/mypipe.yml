@@ -15,7 +15,7 @@ jobs:
       run: echo "Testing started" 
     
     - name: Test execution
-      run: ls && cd my_python_project && echo "Tests result is:" > output.txt && python -m unittest discover tests >> my_python_project/output.txt
+      run: ls && cd my_python_project && echo "Tests result is:" > output.txt && python -m unittest discover tests >> output.txt
 
     - name: send telegram message on push
       uses: appleboy/telegram-action@master
