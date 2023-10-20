@@ -1,8 +1,7 @@
 name: python_pypline_basic
-on: 
-  branches:
-    - master
-    - main
+on:
+  push:
+    branches: [main]
 jobs:
   my_tests:
     runs-on: ubuntu-latest
