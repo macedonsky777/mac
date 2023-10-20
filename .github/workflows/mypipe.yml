@@ -15,7 +15,7 @@ jobs:
       run: echo "Testing started" 
     
     - name: Test execution
-      run: cd my_python_project && echo "Tests result is ${{ GITHUB_REPOSITORY }}" > output.txt && python3 -m unittest discover tests &>> output.txt
+      run: cd my_python_project && echo "Tests result is ${{ github.repository }}" > output.txt && python3 -m unittest discover tests &>> output.txt
 
     - name: send telegram message on push
       uses: appleboy/telegram-action@master
