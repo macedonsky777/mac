@@ -1,4 +1,6 @@
 name: python_pypline_basic
+env:
+  FILE_NAME: "output.txt"
 on:
   push:
     branches: [main]
@@ -20,7 +22,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message_file: 'my_python_project/output.txt'
+        message_file: ${{ FILE_NAME }}
       env:
         TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
