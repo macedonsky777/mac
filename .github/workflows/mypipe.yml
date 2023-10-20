@@ -1,1 +1,25 @@
+name: python_pypline_basic
+on: 
+  branches:
+    - master
+    - main
+jobs:
+  my_tests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Testing started
+      run: echo "Testing started" 
+    
+    - name: Test execution
+      run: python -m unittest discover tests
 
+
+
+
+
+  my_build:
+    runs-on: ubuntu-latest
+    needs: [my_tests]
+    steps:
+    - name: Building started
+      run: echo "Building started" 
